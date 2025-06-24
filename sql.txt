@@ -1,0 +1,257 @@
+---users_types table###########
+
+create table users_types
+(
+user_type_id int not null auto_increment primary key,
+user_type varchar(30) not null unique
+);
+
+---records
+
+insert into users_types (user_type) values ('Admin'),('Buyer'),('Seller');
+
+
+---status  table##############
+
+create table status
+(
+status_id int not null auto_increment primary key,
+status varchar(30) not null unique
+);
+
+---records
+
+insert into status (status) values ('Active'),('Inactive'),('Pending'),('Unprocessed');
+
+
+---categories  table#########
+
+create table categories 
+(
+category_id int not null auto_increment primary key,
+category varchar(30) not null unique
+);
+
+#query------------------------------------
+insert into categories (category) values 
+('Baby'),('Beauty'),('Books'),('Clothing'),('Computer & Accessories'),('Electronics'),('Furniture');
+
+---users  table############
+
+create table users
+(
+user_id int not null auto_increment primary key,
+username varchar(30) not null unique,
+email varchar(60) not null unique,
+password varchar(100) not null,
+first_name varchar(20) null,
+middle_name varchar(20) null,
+last_name varchar(20) null,
+dob date null,
+user_type_id int not null default 2,
+status_id int not null default 2,
+Constraint fk_users_users_types foreign key (user_type_id)
+references users_types (user_type_id),
+Constraint fk_users_status foreign key (status_id)
+references status (status_id)
+);
+
+
+---alter
+
+alter table users change column password password varchar(100) not null;
+alter table users add column activation_code varchar(100);
+alter table users add column mobile varchar(10);
+alter table users add column profpic varchar(100);
+
+#query------------------
+insert into users (username,email,password) value (?,?,?)
+update users set status_id=1,activation_code='' where username=? and activation_code=?;
+select user_id from users where username=? or email=?;
+select password,user_id,username,email,first_name,middle_name,last_name,dob,
+user_type_id,status_id from users where username=? or email=?;
+update users set first_name=?,middle_name=?,last_name=?,dob=?,mobile=? where user_id=?;
+update users set profpic=? where user_id=?
+
+
+---states  table##########
+
+create table states
+(
+state_id int auto_increment primary key,
+state varchar(30) not null
+);
+
+#records
+insert into states (state) values ('MP'),('UP'),('AP');
+
+
+---cities table##########
+
+create table cities 
+(
+city_id int not null auto_increment primary key,
+city varchar(30) not null,
+state_id int not null,
+Constraint fk_cities_states foreign key(state_id)
+references states (state_id)
+);
+
+#records
+insert into cities (city,state_id) values ('Jabalpur',1),('Bhopal',1),('Indore',1),('Gwalior',1),('Itarsi',1),('Lucknow',2),('Kanpur',2),('Prayagraj',2);
+select city_id,city from cities where city like 'I%';
+
+
+---addresses table##############
+
+create table addresses
+(
+address_id int not null auto_increment primary key,
+user_id int not null,
+address varchar(500) not null,
+city_id int not null,
+pin int not null,
+default_address boolean not null default false,
+Constraint fk_addresses_users foreign key (user_id)
+references users (user_id),
+Constraint fk_addresses_cities foreign key (city_id)
+references cities (city_id)
+);
+
+#alter---------------
+alter table addresses add column name varchar(60) not null after user_id;
+
+#query------------------------
+insert into addresses (user_id,address,city_id,pin,default_address) value (?,?,?,?,?);
+select * from addresses as a inner join cities as c 
+where a.city_id=c.city_id and user_id=? and default_address=1;
+select address_id,name,address,pin,c.city_id,city
+from addresses as a inner join cities as c 
+where a.city_id=c.city_id and user_id=?
+
+---sellers  table##########
+
+create table sellers
+(
+seller_id int not null auto_increment primary key,
+user_id int not null,
+seller_ac_name varchar(40) not null ,
+start_date timestamp not null,
+Constraint fk_selles_users foreign key (user_id)
+references users (user_id),
+);
+
+#query----------------------------
+select * from sellers where user_id=?;
+insert into sellers (user_id,seller_ac_name,start_date) values (?,?,?);
+
+---products table#############
+
+create table products
+(
+product_id int not null auto_increment primary key,
+seller_id int not null,
+category_id int not null,
+product_name varchar(70) not null,
+quantity int not null,
+sold int not null default 0,
+price int not null,
+discount float not null default 0,
+description varchar(5000) not null,
+warranty varchar(1000) not null,
+returning_policy varchar(1000) not null,
+Constraint fk_products_sellers foreign key (seller_id)
+references sellers (seller_id),
+Constraint fk_products_categories foreign key (category_id)
+references categories (category_id)
+);
+
+#alter------------------------------
+alter table products add column shipment_details varchar(5000);
+alter table products add column payment_details varchar(3000);
+alter table products change column description description varchar(5000) null;
+alter table products change column warranty warranty varchar(1000) null;
+alter table products change column returning_policy returning_policy varchar(1000) null;
+alter table products change column sold sold int not null default 0;
+
+#query------------------------------
+insert into products (seller_id,category_id,product_name,quantity,price,discount) value (?,?,?,?,?,?);
+update products set description=? where product_id=?
+update products set warranty=? where product_id=?
+update products set returning_policy=? where product_id=?
+update products set shipment_details=? where product_id=?
+update products set payment_details=? where product_id=?
+select product_id,product_name,quantity,sold,price,discount from products where seller_id=? order by product_id desc;
+select product_name,quantity,sold,price,discount,description,warranty,returning_policy,shipment_details,payment_details,p.seller_id,seller_account_name from products as p inner join sellers as s where product_id=? and p.seller_id=s.seller_id;
+select product_id,product_name,price,discount from products where product_id=?
+
+---product_points  table##############
+
+create table product_points
+(
+product_point_id int not null auto_increment primary key,
+product_id int not null,
+point_header varchar(40) not null,
+point_value varchar(300) not null,
+Constraint fk_product_points_products foreign key (product_id)
+references products (product_id)
+);
+
+#query---------------------------
+insert into product_points (product_id,point_header,point_value) value (?,?,?)
+select point_header,point_value from product_points where product_id=?
+
+
+---product_pics  table#################
+
+create table product_pics 
+(
+product_pic_id int not null auto_increment primary key,
+product_id int not null,
+product_pic varchar(60) not null,
+Constraint fk_product_pics_products foreign key (product_id)
+references products (product_id)
+);
+
+
+#query------------------------
+insert into product_pics (product_id,product_pic) value (?,?)
+select product_pic from product_pics where product_id=? limit 1
+select product_pic_id,product_pic from product_pics where product_id=?
+
+---carts  table #################
+
+create table carts 
+(
+cart_id int not null auto_increment primary key,
+user_id int not null,
+address_id int not null,
+cart_date date not null,
+total_amount float not null,
+products_count int not null,
+status_id int not null,
+Constraint fk_carts_users foreign key (user_id)
+references users (user_id),
+Constraint fk_carts_addresses foreign key (address_id)
+references addresses (address_id),
+Constraint fk_carts_status foreign key (status_id)
+references status (status_id)
+);
+
+
+---cart_items  table##############
+
+create table cart_items
+(
+cart_item_id int not null auto_increment primary key,
+cart_id int not null,
+product_id int not null,
+quantity int not null,
+status_id int not null,
+Constraint fk_cart_items_carts foreign key (cart_id)
+references carts (cart_id),
+Constraint fk_cart_items_products foreign key (product_id)
+references products (product_id),
+Constraint fk_cart_items_status foreign key (status_id)
+references status (status_id)
+);

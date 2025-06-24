@@ -1,0 +1,55 @@
+#msg{
+	margin:40px auto;
+	font-size:30px;
+	border:1px solid #ccc;
+	padding:25px;
+	width:50%;
+	text-align:center;
+}
+#seller_box{
+	margin:40px auto;
+	width:50%;
+	border:1px solid #ccc;
+	border-radius:8px;
+}
+#seller_box th,td{
+	border:1px solid #ccc;
+	font-size:20px;
+	height:50px;
+	border-radius:7px;
+}
+#seller_box th{
+	background-color:#555;
+	color:white;
+}
+#seller_box a{
+	text-decoration:none;
+}
+#new_seller_box{
+	width:40%;
+	margin:20px auto;
+	text-align:center;
+}
+#new_seller_account{
+	text-decoration:none;
+	font-size:25px;
+	border:1px solid #ec203f;
+	padding:5px 20px;
+	color:white;
+	background-color:#ec203f;
+	border-radius:10px;
+	font-weight:bold;
+}
+.center{
+	text-align:center;
+	color:#555;
+}
+.cl1{
+	width:10%;
+}
+.cl2{
+	width:40%;
+}
+.cl3{
+	width:50%;
+}

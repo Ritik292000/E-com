@@ -1,0 +1,123 @@
+h2{
+	color:#008040;
+	width:70%;
+	border-bottom:3px solid #008040;
+	margin:10px auto;
+	padding-bottom:10px;
+	padding-left:20px;
+	font-size:30px;
+}
+#cart_box{
+	width:70%;
+	margin:10px auto;
+	
+}
+.produc_recs{
+	border:1px solid #ccc;
+	border-radius:7px;
+	margin-bottom:10px;
+	padding:7px;
+}
+.rec_rht{
+	float:right;
+	width:75%;
+	padding:10px;
+	height:60px;
+}
+.rec_lft{
+	width:20%;
+	text-align:center;
+	padding:10px;
+}
+.produc_ttl{
+	font-size:18px;
+	font-weight:bold;
+	color:#555;
+	
+}
+.quantity_box{
+	width:50%;
+	margin-top:10px;
+	display:inline-block;
+}
+.produc_qt{
+	font-size:16px;
+	font-weight:bold;
+	padding:0px 5px;
+	cursor:pointer;
+}
+.produc_price{
+	float:right;
+	padding:15px;
+	font-size:21px;
+	font-weight:bold;
+	color:#555;
+}
+.discount{
+	font-size:20px;
+	color:#ccc;
+	text-decoration:line-through;
+	padding:5px;
+	font-weight:normal;
+}
+.pro_img{
+	height:100px;
+}
+.del_box{
+	margin-left:70px;
+	font-size:14;
+	font-weight:bold;
+	color:red;
+	cursor:pointer;
+}
+.del_box img{
+	vertical-align:bottom;
+}
+.cart_total_box{
+	margin:5px auto;
+	font-weight:bold;
+	font-size:26px;
+	width:70%;
+	padding:5px 8px;
+	text-align:right;
+	
+}
+.ttl_lbl{
+	color:#555;
+}
+#ttl{
+	color:#0066ff;
+	margin-right:90px;
+}
+#empty{
+	width:70%;
+	display:none;
+	border:1px solid #777;
+	margin:30px auto;
+	border-radius:9px;
+	text-align:center;
+	background-color:#eee;
+	height:150px;
+}
+#empty h3{
+	font-size:25px;
+	margin:50px auto;
+	color:#777;
+}
+#button_box{
+	border-top:3px solid #008040; 
+	width:70%;
+	margin:10px auto;
+	margin-bottom:70px;
+	text-align:center;
+}
+#checkout{
+	border:1px solid #009900;
+	color:white;
+	background-color:#009900;
+	font-size:23px;
+	padding:8px 14px;
+	margin:20px;
+	border-radius:8px;
+	cursor:pointer;
+}

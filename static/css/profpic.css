@@ -1,0 +1,18 @@
+#outer_box{
+	margin:30px auto;
+	width:70%;
+}
+.outer_box_cell{
+	
+	width:50%
+}
+#form_box{
+	width:100%;
+	
+}
+.lft{
+	text-align:right;
+}
+#profpic{
+	width:70%;
+}

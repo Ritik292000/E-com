@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+  metadata-complete="true">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+  <context-param>
+	<param-name>sender_email</param-name>
+	<param-value>lonewolf29012000@gmail.com</param-value>
+  </context-param>
+
+  <context-param>
+	<param-name>sender_email_password</param-name>
+	<param-value>netbeans.com</param-value>
+  </context-param>
+
+  
+  <servlet>
+	<servlet-name>ecom_001_day_2</servlet-name>
+	<servlet-class>controllers.SignupServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_001_day_2</servlet-name>
+	<url-pattern>/signup.do</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+	<servlet-name>ecom_002_day_12</servlet-name>
+	<servlet-class>controllers.AccountActivationServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_002_day_12</servlet-name>
+	<url-pattern>/activation.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_003_day_13</servlet-name>
+	<servlet-class>controllers.UniqueCheckServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_003_day_13</servlet-name>
+	<url-pattern>/unique_check.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_004_day_14</servlet-name>
+	<servlet-class>controllers.SigninServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_004_day_14</servlet-name>
+	<url-pattern>/signin.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_005_day_15</servlet-name>
+	<servlet-class>controllers.ProfileServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_005_day_15</servlet-name>
+	<url-pattern>/profile.do</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+	<servlet-name>ecom_006_day_16</servlet-name>
+	<servlet-class>controllers.CitySearchServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_006_day_16</servlet-name>
+	<url-pattern>/city_search.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_007_day_17</servlet-name>
+	<servlet-class>controllers.AddressServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_007_day_17</servlet-name>
+	<url-pattern>/address.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_008_day_18</servlet-name>
+	<servlet-class>controllers.ProfpicServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_008_day_18</servlet-name>
+	<url-pattern>/profpic.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_009_day_18</servlet-name>
+	<servlet-class>controllers.SignoutServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_009_day_18</servlet-name>
+	<url-pattern>/signout.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_010_day_19</servlet-name>
+	<servlet-class>controllers.HomeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_010_day_19</servlet-name>
+	<url-pattern>/home.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_011_day_21</servlet-name>
+	<servlet-class>controllers.ShowProfpicServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_011_day_21</servlet-name>
+	<url-pattern>/showprofpic.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_012_day_22</servlet-name>
+	<servlet-class>controllers.SendOTPServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_012_day_22</servlet-name>
+	<url-pattern>/sendsms.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_013_day_23</servlet-name>
+	<servlet-class>controllers.SellerPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_013_day_23</servlet-name>
+	<url-pattern>/seller_page.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_014_day_24</servlet-name>
+	<servlet-class>controllers.NewSellerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_014_day_24</servlet-name>
+	<url-pattern>/new_seller.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_015_day_26</servlet-name>
+	<servlet-class>controllers.SellerDashboardServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_015_day_26</servlet-name>
+	<url-pattern>/seller_dashboard.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_016_day_26</servlet-name>
+	<servlet-class>controllers.NewProductServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_016_day_26</servlet-name>
+	<url-pattern>/new_product.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_017_day_31</servlet-name>
+	<servlet-class>controllers.SaveProductDescriptionServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_017_day_31</servlet-name>
+	<url-pattern>/save_product_desc.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_018_day_32</servlet-name>
+	<servlet-class>controllers.SaveProductWarrantyServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_018_day_32</servlet-name>
+	<url-pattern>/save_product_warranty.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ecom_019_day_32</servlet-name>
+	<servlet-class>controllers.SaveReturningPolicyServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_019_day_32</servlet-name>
+	<url-pattern>/save_returning_policy.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_020_day_32</servlet-name>
+	<servlet-class>controllers.SaveShipmentDetailsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_020_day_32</servlet-name>
+	<url-pattern>/save_shipment_details.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_021_day_33</servlet-name>
+	<servlet-class>controllers.SavePaymentDetailsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_021_day_33</servlet-name>
+	<url-pattern>/save_payment_details.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_022_day_34</servlet-name>
+	<servlet-class>controllers.SaveProductPointsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_022_day_34</servlet-name>
+	<url-pattern>/save_product_points.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_023_day_36</servlet-name>
+	<servlet-class>controllers.SaveProductPicsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_023_day_36</servlet-name>
+	<url-pattern>/upload_product_pic.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_024_day_40</servlet-name>
+	<servlet-class>controllers.AllProductServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_024_day_40</servlet-name>
+	<url-pattern>/all_products.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_025_day_44</servlet-name>
+	<servlet-class>controllers.ProductImageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_025_day_44</servlet-name>
+	<url-pattern>/product_image.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_026_day_45</servlet-name>
+	<servlet-class>controllers.ViewProductServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_026_day_45</servlet-name>
+	<url-pattern>/viewproduct.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>	
+	<servlet-name>ecom_027_day_46</servlet-name>
+	<servlet-class>controllers.ProductPicsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_027_day_46</servlet-name>
+	<url-pattern>/all_product_pics.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>	
+	<servlet-name>ecom_028_day_46</servlet-name>
+	<servlet-class>controllers.ShowProductPicServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_028_day_46</servlet-name>
+	<url-pattern>/product_pic.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_029_day_47</servlet-name>
+	<servlet-class>controllers.ShowProductPointsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_029_day_47</servlet-name>
+	<url-pattern>/all_product_points.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_030_day_49</servlet-name>
+	<servlet-class>controllers.SearchServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_030_day_49</servlet-name>
+	<url-pattern>/search.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_031_day_51</servlet-name>
+	<servlet-class>controllers.AddToCartServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_031_day_51</servlet-name>
+	<url-pattern>/addtocart.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_032_day_52</servlet-name>
+	<servlet-class>controllers.ShowCartServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_032_day_52</servlet-name>
+	<url-pattern>/showcart.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_033_day_56</servlet-name>
+	<servlet-class>controllers.UpdateCartServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_033_day_56</servlet-name>
+	<url-pattern>/update_cart.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_034_day_57</servlet-name>
+	<servlet-class>controllers.DeleteRecordServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_034_day_57</servlet-name>
+	<url-pattern>/delete_record.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>ecom_035_day_58</servlet-name>
+	<servlet-class>controllers.ShowAddressesServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>ecom_035_day_58</servlet-name>
+	<url-pattern>/addresses.do</url-pattern>
+  </servlet-mapping>
+
+  <listener>
+	<listener-class>listeners.AppListener</listener-class>
+  </listener>
+
+
+
+
+</web-app>

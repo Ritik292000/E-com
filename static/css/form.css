@@ -1,0 +1,88 @@
+#error_msg{
+	margin:30px auto;
+	color:#ff7373;
+	background-color:#ffc8c8;
+	border:2px solid #ff4040;
+	padding:5px 12px;
+	width:35%;
+	
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
+	display:none;
+
+}
+#form_box{
+	border:1px solid #ccc;
+	border-radius:7px;
+	margin:30px auto;
+	width:50%;
+	margin-bottom:90px;
+}
+caption{
+	font-size:26px;
+	font-weight:bold;
+	color:#555;
+	text-align:left;
+	border-bottom:1px solid #999;
+	margin-bottom:10px;
+	padding-left:12px;
+	padding-bottom:8px;
+}
+tr{
+	height:55px;
+}
+.lft{
+	font-size:20px;
+	font-weight:bold;
+	text-align:right;
+	color:#555;
+	padding-right:7px;
+}
+.rht input{
+	font-size:20px;
+	border-radius:5px;
+	padding:5px 8px;
+}
+.rht select{
+	font-size:20px;
+	border-radius:5px;
+	padding:5px 8px;
+}
+.normal_input{
+	color:#555;
+	border:1px solid #777;
+}
+.onecol{
+	padding:5px 10px;
+	border-radius:8px;
+}
+.onecol textarea{
+	font-size:25px;
+	color:#555;
+	padding:10px;
+	border-radius:10px;
+}
+.instruction{
+	font-size:30px;
+	color:#aaa;
+}
+#button{
+	font-size:22px;
+	font-weight:bold;
+	padding:8px 16px;
+	border:1px solid #10cd1a;
+	border-radius:8px;
+	color:#fff;
+	cursor:pointer;
+	background-color:#10cd1a;
+}
+.error{
+	color:#ff7373;
+	background-color:#ffc8c8;
+	border:1px solid #ff4040;
+}
+.img{
+	margin-left:15px;
+	height:30px;
+}

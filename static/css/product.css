@@ -1,0 +1,142 @@
+#menu{
+	margin-bottom:30px;
+}
+#main_body{
+	margin-bottom:50px;
+	overflow:auto;
+	height:730px;
+}
+#prod_ttl{
+	font-weight:bold;
+	margin:20px auto 0px auto;
+	background-color:#f4f4f4;
+	color:#444;
+	font-size:30px;
+	padding-left:20px;
+}
+#product_box{
+	width:90%;
+	/*border:1px solid red;*/
+	margin:35px auto;
+	height:250px;
+}
+#lft{
+	float:left;
+	width:35%;
+	border-right:1px solid #ccc;
+	height:250px;
+}
+.small_pics{
+	width:50px;
+}
+#all_product_pics{
+	float:left;
+	width:19%;
+	text-align:center;
+}
+#pic_box{
+	height:240px;
+	width:79%;
+	margin-left:20%;
+	text-align:center;
+}
+#pic_focus{
+	width:90%;
+}
+
+#rht{
+	width:65%;
+	height:200px;
+	margin-left:35%;
+}
+.recs{
+	color:#555;
+}
+.ttl{
+	color:blue;
+/*	font-weight:bold;	*/
+	font-size:18px;
+}
+#seller{
+/*	font-weight:bold;*/
+}
+#price{
+	font-size:20px;
+	font-weight:bold;
+}
+#aftdisc{
+	color:white;
+	background-color:#ff952b;
+	padding:5px;
+	border-radius:8px;
+	font-size:16;
+	font-weight:bold;
+}
+#mrp{
+	color:#ccc;
+	font-size:16px;
+	text-decoration:line-through;
+}
+#all_tabs div{
+	display:inline-block;
+	border:1px solid #555;
+	border-bottom:none;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	padding:5px 12px;
+	font-size:18px;
+	font-weight:bold;
+	cursor:pointer;
+}
+.desc_sel{
+	background-color:#555;
+	color:#fff;
+}
+.desc_nsel{
+	background-color:#fff;
+	color:#555;
+}
+#other_details_box{
+	border:1px solid #ccc;
+	min-height:200px;
+}
+.otdl{
+	width:95%;
+/*	border:1px solid red;*/
+	margin:18px auto;
+}
+.otdl_show{
+	display:show;
+}
+.otdl_hide{
+	display:none;
+}
+#propt_tbl{
+	width:80%;
+	margin:20px auto;
+	border:1px solid #ccc;
+	border-collapse:collapse;
+	border-radius:8px;
+}
+#propt_tbl td{
+	border:1px solid #ccc;
+	width:50%;
+	padding-left:30px;
+	color:#555;
+	height:45px;
+}
+#propt_tbl caption{
+	color:#fff;
+	background-color:#555;
+	border:1px solid #ccc;
+	font-weight:bold;
+	font-size:21.5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+}
+.cell0{
+	font-weight:bold;
+	font-size:18px;
+}
