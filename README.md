@@ -60,7 +60,3 @@ This project was also briefly deployed on an **AWS server** to gain experience w
 ## 📌 About
 
 **E-Cart** aims to simulate a real-world e-commerce platform and demonstrate skills in full-stack web development using core Java technologies.
-
----
-
-Let me know if you'd like to include screenshots, demo login credentials, or a setup guide section!
